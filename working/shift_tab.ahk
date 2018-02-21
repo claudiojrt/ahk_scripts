@@ -1,0 +1,5 @@
+﻿a::
+{
+	Send +{tab}
+	return	
+}
