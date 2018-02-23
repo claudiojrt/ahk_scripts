@@ -80,5 +80,5 @@ log_format(log_path){
 	TF_ReplaceInLines(log_path,0,line_counter,"Flow - Variable Parameter","Parameter")
 	TF_ReplaceInLines(log_path,0,line_counter,"Fast Forward","FF")
 	TF_ReplaceInLines(log_path,0,line_counter,">>  Processing Event",">> Event")
-	TF_ReplaceInLines(log_path,0,line_counter,"{CGData}.","")2
+	TF_ReplaceInLines(log_path,0,line_counter,"{CGData}.","")
 }
