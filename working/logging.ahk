@@ -1,25 +1,44 @@
+#Persistent
+#SingleInstance force
+
+;@TODO
+;- F1 (help)
+;- IfWinActive uniPaaS/XPA
+
+SetKeyDelay, 25, 25
+
+;MACROS
+
+!ESC::ExitApp
+
 !n::
 {
-	SetKeyDelay, 75, 20
-	Loop 11
-	{
-		Sendinput n
-		SendInput {down}
-	}
-	Sendinput n
+	open_log()
+	set_log(false)
 	return
 }
 
 !y::
 {
-	SetKeyDelay, 75, 20
-	Loop 11
-	{
-		Sendinput y
-		SendInput {down}
-	}
-	Sendinput y
+	open_log()
+	set_log(true)
 	return
 }
 
-!ESC::ExitApp
+;FUNCTIONS
+
+set_log(state){
+	Loop 12	{
+		if state
+			SendInput y
+		else
+			SendInput n
+		SendInput {down}
+	}
+	SendInput {enter}
+}
+
+open_log(){
+	Send {ALT}
+	Send oso
+}
