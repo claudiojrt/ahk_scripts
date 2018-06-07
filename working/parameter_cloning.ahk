@@ -1,7 +1,4 @@
-﻿; MAIN
-
-
-; HOTKEYS
+﻿; HOTKEYS
 F11::
 {
 	Send ^c
@@ -10,6 +7,7 @@ F11::
 	MsgBox, , Atenção, Texto copiado: %clipboard%`n`nTamanho: %Count%
 	return
 }
+
 ^F9::
 {
 	IfWinExist, Cria Parâmetros
@@ -25,11 +23,12 @@ F11::
 	}
 	return
 }
+
 ^F10::
 {
 	IfWinExist, Copia Parametros
 	{
-		WinActivate 
+		WinActivate
 	}
 	else{
 		Gui, New,, Copia Parametros
@@ -41,11 +40,12 @@ F11::
 	}
 	return
 }
+
 ^F11::
 {
 	IfWinExist, Copia Modelos
 	{
-		WinActivate 
+		WinActivate
 	}
 	else{
 		Gui, New,, Copia Modelos
@@ -56,11 +56,12 @@ F11::
 	}
 	return
 }
+
 ^F12::
 {
 	IfWinExist, Exclui Registros
 	{
-		WinActivate 
+		WinActivate
 	}
 	else{
 		Gui, New,, Exclui Registros
@@ -71,7 +72,7 @@ F11::
 	}
 	return
 }
-ScrollLock::Suspend
+
 !ESC::ExitApp
 GuiEscape:
 {
@@ -80,8 +81,8 @@ GuiEscape:
 }
 
 
-; MACROS
-Button1:	; Copia Parâmetros
+; Copia Parâmetros
+Button1:
 {
 	Gui, Submit
 	Sleep 100
@@ -100,7 +101,7 @@ Button1:	; Copia Parâmetros
 		Send {Down}
 		Sleep 30
 		AltTab()
-	}	
+	}
 	clipboard=
 	Send ^c
 	ClipWait
@@ -112,7 +113,9 @@ Button1:	; Copia Parâmetros
 	Send {Tab}
 	return
 }
-Button2:	; Exclui linhas
+
+; Exclui linhas
+Button2:
 {
 	Gui, Submit
 	Sleep 100
@@ -125,7 +128,9 @@ Button2:	; Exclui linhas
 	}
 	return
 }
-Button3:	; Cria Parâmetros
+
+; Cria Parâmetros
+Button3:
 {
 	Gui, Submit
 	Sleep 100
@@ -136,7 +141,9 @@ Button3:	; Cria Parâmetros
 	}
 	return
 }
-Button4:	; Copia modelos
+
+; Copia modelos
+Button4:
 {
 	Gui, Submit
 	Sleep 100
@@ -168,8 +175,6 @@ Button4:	; Copia modelos
 	return
 }
 
-
-; FUNÇÕES
 CopiaSemModelo(){
 	WinTitle=
 	NVar=

@@ -2,14 +2,11 @@
 #SingleInstance force
 
 ;@TODO
-;- F1 (help)
 ;- IfWinActive uniPaaS/XPA
 
-SetKeyDelay, 25, 25
-
-;MACROS
-
 !ESC::ExitApp
+
+SetKeyDelay, 25, 25
 
 !n::
 {

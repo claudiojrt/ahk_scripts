@@ -147,10 +147,3 @@ Calcula(){
 	Global LD:=Chr(LD)
 	Global LE:=Chr(LE)
 }
-
-
-
-;	Var:=Chr(x+1)
-;	x++
-;	Send %Var%
-;	65-90
