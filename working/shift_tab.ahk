@@ -1,5 +1,0 @@
-﻿a::
-{
-	Send +{tab}
-	return	
-}
