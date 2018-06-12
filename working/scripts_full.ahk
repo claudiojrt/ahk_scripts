@@ -58,6 +58,13 @@ if(initMessage=0){
 	IniWrite, 1, %inifile%, Main, initMessage
 }
 
+; Startup configs
+;SplitPath, A_Scriptname, , , , OutNameNoExt 
+;LinkFile=%A_StartupCommon%\%OutNameNoExt%.lnk 
+;IfNotExist, %LinkFile% 
+;	FileCreateShortcut, %A_ScriptFullPath%, %LinkFile% 
+;SetWorkingDir, %A_ScriptDir%
+
 ;================================================================================
 ; Letras sequenciais
 /*
