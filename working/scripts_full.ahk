@@ -543,4 +543,4 @@ GuiEscape:
 
 !ESC::ExitApp
 
-ScrollLock::Suspend
+Pause::Suspend
