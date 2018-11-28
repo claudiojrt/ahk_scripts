@@ -17,15 +17,18 @@
 
 /*TODO:
 	- Melhorar códigos e nomes das virtuais
+    - Separar código das macros, utilizar includes
 	- Integrar "Letras Sequenciais"
+    - Integrar "Replace"
+    - Integrar "Find Delete"
+    - Integrar "Column to parameter"
+	- Painel de configurações do script: Ativar/desativar determinadas macros
 	- Configuração de linguagem de sistema (automático?)
 	- Configuração de versão do windows
 	- Configuração de startup
 		%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
 		Pesquisar como criar automaticamente um atalho para o executável
-	- Painel de configurações do script
-		Desativar determinadas macros
-		Método de printscreen (print salva diretamente / selecionar área com Lightshot e pressionar "c")
+	- Painel de configurações do script: método de printscreen (print salva diretamente / selecionar área com Lightshot e pressionar "c")
 	- Melhorar ícone
 */
 
