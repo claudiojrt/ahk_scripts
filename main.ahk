@@ -4,6 +4,7 @@
 #include %A_scriptDir%\lib\cursor.ahk
 #include %A_scriptDir%\lib\sequencial_letters.ahk
 #include %A_scriptDir%\lib\sequencial_numbers.ahk
+#include %A_scriptDir%\lib\printscreen.ahk
 
 ; INIT
     cursor_wait()
@@ -18,6 +19,10 @@ F10::
     
 ^F10::
     sqcn_numeros_sequenciais()
+    return
+    
+~PrintScreen::
+    prts_printscreen()
     return
  
 GuiEscape:
