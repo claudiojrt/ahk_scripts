@@ -3,6 +3,7 @@
 #include %A_scriptDir%\lib\ini.ahk
 #include %A_scriptDir%\lib\cursor.ahk
 #include %A_scriptDir%\lib\sequencial_letters.ahk
+#include %A_scriptDir%\lib\sequencial_numbers.ahk
 
 ; INIT
     cursor_wait()
@@ -13,6 +14,10 @@
 
 F10::
     sqcl_letras_sequenciais()
+    return
+    
+^F10::
+    sqcn_numeros_sequenciais()
     return
  
 GuiEscape:
