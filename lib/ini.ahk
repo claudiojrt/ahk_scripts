@@ -6,7 +6,7 @@ ini_config(){
 
     IniRead, Value, %inifile%, Main, initMessage , 0
     if(Value = 0){
-        MsgBox, , Aviso, Obrigado por usar meus scripts, espero que te ajudem. `r`n`r`n<ALT+ESC> para fechar o script`r`n<Pause> para interromper o script (play/pause)
+        MsgBox, , Aviso, Obrigado por usar meus scripts, espero que te ajudem. `r`n`r`n<ALT+ESC> para fechar o script`r`n<Pause> para interromper o script (play/pause)`r`n<ALT+F12> para habilitar/desabilitar determinados scripts.
         IniWrite, 1, %inifile%, Main, initMessage
     }
 
