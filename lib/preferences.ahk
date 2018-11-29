@@ -1,7 +1,4 @@
-#include %A_scriptDir%\lib\ini.ahk
-
 pref_preferences(){
-    
     sqcl := ini_getPropriety("SequencialLetters")
     sqcn := ini_getPropriety("SequencialNumbers")
     prts := ini_getPropriety("PrintscreenToPaint")
@@ -25,7 +22,7 @@ pref_preferences(){
         Gui, Add, Button, x317 y178 w96 h24 gpref_Button1, Ok
         Gui, Show, w425 h211,
         
-        GuiControl, Disable, pref_fdel
+        ;GuiControl, Disable, pref_fdel
         GuiControl, Disable, pref_repl
         GuiControl, Disable, pref_ctpr
         return
@@ -36,11 +33,14 @@ pref_preferences(){
 pref_Button1:
 {
 	Gui Submit
-    ini_setPropriety("SequencialLetters", pref_sqcl)
-    ini_setPropriety("SequencialNumbers", pref_sqcn)
-    ini_setPropriety("PrintscreenToPaint", pref_prts)
-    ini_setPropriety("FindDelete", pref_fdel)
-    ini_setPropriety("Replace", pref_repl)
-    ini_setPropriety("ColumnToParameter", pref_ctpr)
+    ; Necessário testar, pois ao dar o #include deste arquivo os comandos estão disparando como se fizessem parte do autorun, limpando o ini.
+    if (pref_sqcl != "") {
+        ini_setPropriety("SequencialLetters", pref_sqcl)
+        ini_setPropriety("SequencialNumbers", pref_sqcn)
+        ini_setPropriety("PrintscreenToPaint", pref_prts)
+        ini_setPropriety("FindDelete", pref_fdel)
+        ini_setPropriety("Replace", pref_repl)
+        ini_setPropriety("ColumnToParameter", pref_ctpr)
+    }
     return
 }
