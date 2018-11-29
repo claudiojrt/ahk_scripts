@@ -23,7 +23,7 @@ pref_preferences(){
         Gui, Show, w425 h211,
         
         ;GuiControl, Disable, pref_fdel
-        GuiControl, Disable, pref_repl
+        ;GuiControl, Disable, pref_repl
         GuiControl, Disable, pref_ctpr
         return
 	}

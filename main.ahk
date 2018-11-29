@@ -30,11 +30,12 @@ return
 
 ; the rest of the includes should be put here to avoid mess with the autoexecute section
 #include %A_scriptDir%\lib\preferences.ahk
+#include %A_scriptDir%\lib\helper.ahk
 #include %A_scriptDir%\lib\sequencial_letters.ahk
 #include %A_scriptDir%\lib\sequencial_numbers.ahk
 #include %A_scriptDir%\lib\printscreen.ahk
 #include %A_scriptDir%\lib\find_delete.ahk
-#include %A_scriptDir%\lib\helper.ahk
+#include %A_scriptDir%\lib\replace.ahk
 
 ;================================================================================================================
 
@@ -59,6 +60,11 @@ return
         return
     3::
         fdel_delete()
+        return
+
+#If enable_repl
+    F2::
+        repl_replace()
         return
 
 ; necessary to not inherit the 
