@@ -4,7 +4,7 @@
 ; autoexecute section
 
 ; 1 to activate debug messages
-DEBUG_MODE = 0 
+DEBUG_MODE = 0
 
 #include %A_scriptDir%\lib\ini.ahk
 #include %A_scriptDir%\lib\cursor.ahk
@@ -38,47 +38,36 @@ return
 
 ;================================================================================================================
 
-F10::
-    if (enable_sqlc = 1){
+#If enable_sqlc
+    F10::
         sqcl_letras_sequenciais()
-    }
-    return
+        return
 
-^F10::
-    if (enable_sqcn = 1){
+#If enable_sqcn
+    ^F10::
         sqcn_numeros_sequenciais()
-    }
-    return
+        return
 
-~PrintScreen::
-    if (enable_prts = 1){
+#If enable_prts    
+    ~PrintScreen::
         prts_printscreen()
-    }
-    return
+        return
 
-2::
-    if (enable_fdel = 1){
+#If enable_fdel
+    2::
         fdel_find()
-    }
-    else{
-        SendText(2)
-    }
-    return
-
-3::
-    if (enable_fdel = 1){
+        return
+    3::
         fdel_delete()
-    }
-    else{
-        SendText(3)
-    }
-    return
+        return
 
-!F12::
-    pref_preferences()
-    WinWaitClose Preferences
-    LoadPreferences()
-    return
+; necessary to not inherit the 
+#If 1=1
+    !F12::
+        pref_preferences()
+        WinWaitClose Preferences
+        LoadPreferences()
+        return
 
 ;================================================================================================================
 ; GENERAL
@@ -90,7 +79,7 @@ LoadPreferences(){
     global enable_fdel := ini_getPropriety("FindDelete")
     global enable_repl := ini_getPropriety("Replace")
     global enable_ctpr := ini_getPropriety("ColumnToParameter")
-    
+
     if (DEBUG_MODE = 1){
         MsgBox, , Aviso, %enable_sqlc% SequencialLetters `r`n %enable_sqcn% SequencialNumbers `r`n %enable_prts% PrintscreenToPaint `r`n %enable_fdel% FindDelete `r`n
     }
