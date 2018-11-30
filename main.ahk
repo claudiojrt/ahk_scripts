@@ -20,7 +20,7 @@ enable_fdel := ini_getPropriety("FindDelete")
 enable_repl := ini_getPropriety("Replace")
 enable_ctpr := ini_getPropriety("ColumnToParameter")
 
-if (DEBUG_MODE = 1){
+if(DEBUG_MODE = 1){
     MsgBox, , Aviso, %enable_sqlc% SequencialLetters `r`n %enable_sqcn% SequencialNumbers `r`n %enable_prts% PrintscreenToPaint `r`n %enable_fdel% FindDelete `r`n
 }
 
@@ -36,6 +36,7 @@ return
 #include %A_scriptDir%\lib\printscreen.ahk
 #include %A_scriptDir%\lib\find_delete.ahk
 #include %A_scriptDir%\lib\replace.ahk
+#include %A_scriptDir%\lib\column_to_parameter.ahk
 
 ;================================================================================================================
 
@@ -65,6 +66,11 @@ return
 #If enable_repl
     F2::
         repl_replace()
+        return
+
+#If enable_ctpr
+    F2::
+        ctpr_columnToParameter()
         return
 
 ; necessary to not inherit the 

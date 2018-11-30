@@ -1,11 +1,4 @@
-#Persistent
-#SingleInstance force
-
-SetKeyDelay, 20, 20
-
-Menu, Tray, Icon,,, 1
-
-F2::
+ctpr_columnToParameter(){
     send ^c
     send +{tab}
     send +{tab}
@@ -13,7 +6,4 @@ F2::
     send ^v
     send {tab}
     return
-
-!ESC::ExitApp
-
-Pause::Suspend
+}

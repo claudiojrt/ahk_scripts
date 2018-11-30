@@ -21,10 +21,6 @@ pref_preferences(){
         Gui, Add, Checkbox, x24 y138 w300 h24 vpref_ctpr checked%ctpr%, Enable "Column-to-parameter" (F2)
         Gui, Add, Button, x317 y178 w96 h24 gpref_Button1, Ok
         Gui, Show, w425 h211,
-        
-        ;GuiControl, Disable, pref_fdel
-        ;GuiControl, Disable, pref_repl
-        GuiControl, Disable, pref_ctpr
         return
 	}
 	return
