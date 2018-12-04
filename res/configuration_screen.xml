@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
 <gui>
 	<window>
-		<control type="GroupBox" value="" x="12" y="6" w="400" h="162" hwnd="8324360" offsetx="-252" offsety="-145">
-			<control type="Checkbox" value="Enable &quot;Sequencial letters&quot; (F10)" x="24" y="18" w="300" h="24" hwnd="3015550" offsetx="-240" offsety="-133"></control>
-			<control type="Checkbox" value="Enable &quot;Sequencial numbers&quot; (CTRL+F10)" x="24" y="42" w="300" h="24" hwnd="6947652" offsetx="-240" offsety="-109"></control>
-			<control type="Checkbox" value="Enable &quot;Printscreen-to-paint&quot; (PrtScn - C)" x="24" y="66" w="300" h="24" hwnd="1246126" offsetx="-240" offsety="-85"></control>
-			<control type="Checkbox" value="Enable &quot;Find-Delete&quot; (2 / 3)" x="24" y="90" w="300" h="24" hwnd="8979428" offsetx="-240" offsety="-61"></control>
-			<control type="Checkbox" value="Enable &quot;Replace&quot; (F2)" x="24" y="114" w="300" h="24" hwnd="1246402" offsetx="-240" offsety="-37"></control>
-			<control type="Checkbox" value="Enable &quot;Column-to-parameter&quot; (F2)" x="24" y="138" w="300" h="24" hwnd="1901896" offsetx="-240" offsety="-13"></control></control>
-		<control type="Button" value="Ok" x="317" y="178" w="96" h="24" hwnd="852920" offsetx="-32" offsety="-18"></control>
+		<control type="GroupBox" value="" x="12" y="6" w="400" h="186" offsetx="-197" offsety="-157" hwnd="394566">
+			<control type="Checkbox" value="Enable &quot;Sequencial letters&quot; (F10)" x="24" y="18" w="300" h="24" offsetx="-185" offsety="-145" hwnd="984326"></control>
+			<control type="Checkbox" value="Enable &quot;Sequencial numbers&quot; (CTRL+F10)" x="24" y="42" w="300" h="24" offsetx="-185" offsety="-121" hwnd="590722"></control>
+			<control type="Checkbox" value="Enable &quot;Printscreen-to-paint&quot; (PrtScn - C)" x="24" y="66" w="300" h="24" offsetx="-185" offsety="-97" hwnd="460074"></control>
+			<control type="Checkbox" value="Enable &quot;Find-Delete&quot; (2 / 3)" x="24" y="90" w="300" h="24" offsetx="-185" offsety="-73" hwnd="918412"></control>
+			<control type="Checkbox" value="Enable &quot;Replace&quot; (F2)" x="24" y="114" w="300" h="24" offsetx="-185" offsety="-49" hwnd="328530"></control>
+			<control type="Checkbox" value="Enable &quot;Column-to-parameter&quot; (F2)" x="24" y="138" w="300" h="24" offsetx="-75" offsety="-14" hwnd="721588"></control>
+			<control type="Checkbox" value="Enable &quot;Format Parameter (F2)&quot;" x="24" y="162" w="300" h="24" hwnd="23266192" offsetx="-103" offsety="-14"></control></control>
+		<control type="Button" value="Ok" x="317" y="202" w="96" h="24" offsetx="-46" offsety="-11" hwnd="525252"></control>
 	</window>
 	<filename>D:\Git\ahk_scripts\res\configuration_screen.xml</filename>
-	<workarea h="250" w="441" x="410" y="59"></workarea>
+	<workarea h="275" w="441" x="355" y="59"></workarea>
 </gui>

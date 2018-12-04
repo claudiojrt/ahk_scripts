@@ -19,6 +19,7 @@ enable_prts := ini_getPropriety("PrintscreenToPaint")
 enable_fdel := ini_getPropriety("FindDelete")
 enable_repl := ini_getPropriety("Replace")
 enable_ctpr := ini_getPropriety("ColumnToParameter")
+enable_fpar := ini_getPropriety("FormatParameter")
 
 if(DEBUG_MODE = 1){
     MsgBox, , Aviso, %enable_sqlc% SequencialLetters `r`n %enable_sqcn% SequencialNumbers `r`n %enable_prts% PrintscreenToPaint `r`n %enable_fdel% FindDelete `r`n
@@ -37,6 +38,7 @@ return
 #include %A_scriptDir%\lib\find_delete.ahk
 #include %A_scriptDir%\lib\replace.ahk
 #include %A_scriptDir%\lib\column_to_parameter.ahk
+#include %A_scriptDir%\lib\format_parameter.ahk
 
 ;================================================================================================================
 
@@ -72,6 +74,11 @@ return
     F2::
         ctpr_columnToParameter()
         return
+        
+#If enable_fpar
+    F2::
+        fpar_formatParameter()
+        return
 
 ; necessary to not inherit the 
 #If 1=1
@@ -91,10 +98,7 @@ LoadPreferences(){
     global enable_fdel := ini_getPropriety("FindDelete")
     global enable_repl := ini_getPropriety("Replace")
     global enable_ctpr := ini_getPropriety("ColumnToParameter")
-
-    if (DEBUG_MODE = 1){
-        MsgBox, , Aviso, %enable_sqlc% SequencialLetters `r`n %enable_sqcn% SequencialNumbers `r`n %enable_prts% PrintscreenToPaint `r`n %enable_fdel% FindDelete `r`n
-    }
+    global enable_fpar := ini_getPropriety("FormatParameter")
 }
 
 GuiEscape:

@@ -1,16 +1,16 @@
 repl_replace(){
-    send ^a
-    send ^c
+    Send ^a
+    Send ^c
     AltTab()
-    send {Enter}
-    send ^a
-    send ^v
-    mouseclick, left, 712, 52, 1, 0
-    send ^a
-    send ^c
+    Send {Enter}
+    Send ^a
+    Send ^v
+    Mouseclick, left, 712, 52, 1, 0
+    Send ^a
+    Send ^c
     AltTab()
-    send ^a
-    send ^v
-    send {esc}
-    send {enter}
+    Send ^a
+    Send ^v
+    Send {esc}
+    Send {enter}
 }
